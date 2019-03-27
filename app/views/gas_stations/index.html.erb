@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Estaciones de Servicio</h1>
+
+<div class="row">
+      <% @gas_stations.each do |gas_station| %>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <%= image_tag gas_station.image, class: 'img-responsive center-block', sytle: 'max-height:300px;'%>
+        <div class="caption">
+          <h3>Nombre: <%= gas_station.name %></</h3>
+          <p>Direccion: <%= gas_station.address %> </p>
+          <p>Id: <%= gas_station.id_station %> </p>
+          <p>
+            <td><%= link_to 'Show', gas_station %></td>
+            <td><%= link_to 'Edit', edit_gas_station_path(gas_station) %></td>
+           <td><%= link_to 'Destroy', gas_station, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+<br>
+
+<%= link_to 'New Gas Station', new_gas_station_path %>
