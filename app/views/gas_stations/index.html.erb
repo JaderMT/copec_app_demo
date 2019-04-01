@@ -12,9 +12,9 @@
           <p>Direccion: <%= gas_station.address %> </p>
           <p>Id: <%= gas_station.id_station %> </p>
           <p>
-            <td><%= link_to 'Show', gas_station %></td>
-            <td><%= link_to 'Edit', edit_gas_station_path(gas_station) %></td>
-           <td><%= link_to 'Destroy', gas_station, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Show', gas_station, class: 'btn btn-danger' %></td>
+            <td><%= link_to 'Edit', edit_gas_station_path(gas_station), class: 'btn btn-warning' %></td>
+           <td><%= link_to 'Destroy', gas_station, class: 'btn btn-success', method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </p>
         </div>
       </div>
